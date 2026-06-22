@@ -1,0 +1,252 @@
+.carousel-item img{
+  height: 500px;
+  object-fit: cover;
+}
+.carousel-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 60px;
+}
+.carousel-item h5 {
+  font-size: 60px;
+}
+.explore {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+#tabela-explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0% auto;
+}
+.card-explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #88bce0;
+  margin: 20px;
+  height: fit-content;
+max-width: 350px;
+min-width: 280px;
+  color: #fff;
+  font-weight: bold;
+}
+.card-explore-rosa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 350px;
+min-width: 280px;
+  background-color: #f795b9;
+  margin: 20px;
+  height: fit-content;
+  width: 400px;
+  color: #fff;
+  font-weight: bold;
+}
+.horario-local {
+  display: flex;
+  align-items: center;
+  color: #ee82a2;
+  font-weight: bolder;
+}
+
+.horario-local-azul {
+  display: flex;
+  align-items: center;
+  color: #88c8f3;
+  font-weight: bolder;
+}
+#horario-local img {
+  width: 100px;
+  height: 1px;
+}
+
+.carrossel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: #ee82a2;
+  text-align: center;
+  color: #fff;
+}
+.carrossel-wrapper-azul {
+  overflow: hidden;
+  width: 100%;
+  background-color: #88c8f3;
+  text-align: center;
+  color: #fff;
+}
+#carrossel-container-azul {
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  padding: 25px;
+  gap: 25px;
+  background-color: #88c8f3;
+  animation: scrollInfinito 14s linear infinite;
+}
+.carrossel-container {
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  padding: 25px;
+  gap: 25px;
+  background-color: #ee82a2;
+  animation: scrollInfinito 14s linear infinite;
+}
+.card-container {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.preco {
+  background: white;
+  color: rgb(91, 91, 91);
+  text-align: center;
+  font-weight: bold;
+}
+/*tatica pra esconder o texto*/
+
+.descricao {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding: 20px;
+  transition: bottom 0.5s ease;
+  background-color: #fff;
+  opacity: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-container:hover .descricao {
+  bottom: 0;
+}
+@keyframes scrollInfinito {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.combos-salgados {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.combo-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+  color: #e783ad;
+  font-weight: bold;
+  overflow: hidden;
+}
+.card-combo123 {
+  background-color: #ee82a2;
+  padding: 20px;
+  color: #fff;
+  font-weight: bold;
+  min-width: 200px;
+  flex: 1;
+  text-align: center;
+}
+.descricao-combo {
+  background-color: #ffd5e5;
+  text-align: center;
+  flex: 2;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#secao-marmitas{
+  padding: 40px 20px;
+}
+.montar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.card-montar {
+  background-color: #92c5ff;
+  padding: 20px;
+  background-color: #fafafa;
+  border-color: #88bce0;
+  border-radius: 15px;
+  color: #92c5ff;
+  border: 15px solid;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  min-height: 320px;
+}
+#monte-sua-marmita {
+  margin: 20px;
+  color: #92c5ff;
+  font-weight: bolder;
+  text-align: center;
+}
+.montar ul {
+  background-color: #fafafa;
+  list-style: none;
+  text-align: center;
+}
+.card-montar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.combos-caldo {
+  display: flex;
+  margin: 20px;
+  justify-content: space-evenly;
+}
+.combo-card-caldo h2 {
+  background-color: #ee82a2;
+  padding: 8px;
+  color: #fff;
+  border-radius: 8px;
+}
+.combo-card-caldo {
+  width: fit-content;
+  background-color: #ffd5e5;
+  color: #c26189;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+}
+
+
+.carrinho {
+  display: block;
+  width: 80px;
+  margin: 40px auto;
+}
+
+.carrinho:hover{
+  transform: scale(1.1);
+}
