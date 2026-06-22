@@ -6,12 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/fav-icon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
 
 <body>
+    <header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+                <img src="imagens/fav-icon.png" alt="Bootstrap" width="30" height="24">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link-active" aria-current="page" href="#">FAÇA SEU PEDIDO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link-active" aria-current="page" href="#">MENU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link-active" aria-current="page" href="#">SOBRE</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -23,27 +49,27 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="#menu">
+                <a class="carousel-link" href="#menu">
                     <img src="imagens/salgados.jpeg" class="d-block w-100" alt="Salgados">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                         <h5>SALGADOS</h5>
                         <p>Experimente salgados caseiros deliciosos!</p>
                     </div>
                 </a>
             </div>
             <div class="carousel-item">
-                <a href="#menu">
+                <a class="caroulsel-link" href="#menu">
                     <img src="imagens/picadinho de carne com batata.jpeg" class="d-block w-100" alt="Marmitas">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                         <h5>MARMITAS</h5>
                         <p>Compre marmitas e conheça a minha culinária!</p>
                     </div>
                 </a>
             </div>
             <div class="carousel-item">
-                <a href="#menu">
+                <a class="caroulsel-link" href="#menu">
                     <img src="imagens/caldo de mocoto.jpeg" class="d-block w-100" alt="Caldos">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                         <h5>CALDOS</h5>
                         <p>Prove caldos regionais incríveis!</p>
                     </div>
@@ -91,6 +117,38 @@
             </div>
         </div>
     </article>
+
+    <!--Área menu-->
+    <section >
+        <h2 class="titulo">MENU</h2>
+        <div class="menu">
+
+        <div class="card-menu">
+            <img src="imagens/salgados-menu.webp" alt="salgados">
+                <h3>SALGADOS</h3>
+            <div class="span">
+                <span>OPÇÕES</span>
+                <span>COMBOS</span>
+            </div>
+        </div>
+
+        <div class="card-menu" id="marmitas">
+            <img src="imagens/Marmita-menu.jpeg" alt="marmitas">
+                <h3>MARMITAS</h3>
+            <div class="span">
+                <span>OPÇÕES</span>
+                <span>COMBOS</span>
+            </div>
+        </div>
+        <div class="card-menu">
+            <img src="./imagens/Caldo-menu.jpeg" alt="caldos">
+                <h3>CALDOS</h3>
+            <div class="span">
+                <span>OPÇÕES</span>
+                <span>COMBOS</span>
+            </div>
+        </div>
+        </div>
 
     <!--Carrossel de salgados-->
     <div class="carrossel-wrapper">
@@ -502,7 +560,54 @@
             <p>TORRESMO R$1.00 10G <br> OVO DE GALINHA R$1.50 UNID</p>
         </div>
     </div>
+<div class="body-calculadora">
+<section class="pedido">
 
+  <div class="texto">
+    <h1>FAÇA SEU<br>PEDIDO!</h1>
+
+    <p>
+      Caso queira saber o breve valor,<br>
+      utilize a calculadora.
+    </p>
+
+    <a href="https://wa.link/kwxkte" target="_blank" class="botao">Abrir WhatsApp</a>
+  </div>
+
+  <div class="calculadora">
+    <input type="text" id="display" readonly>
+
+    <div class="botoes">
+      <button onclick="adicionar('7')">7</button>
+      <button onclick="adicionar('8')">8</button>
+      <button onclick="adicionar('9')">9</button>
+      <button class="operador" onclick="adicionar('/')">÷</button>
+
+      <button onclick="adicionar('4')">4</button>
+      <button onclick="adicionar('5')">5</button>
+      <button onclick="adicionar('6')">6</button>
+      <button class="operador" onclick="adicionar('*')">×</button>
+
+      <button onclick="adicionar('1')">1</button>
+      <button onclick="adicionar('2')">2</button>
+      <button onclick="adicionar('3')">3</button>
+      <button class="operador" onclick="adicionar('-')">−</button>
+
+      <button onclick="adicionar('0')">0</button>
+      <button onclick="adicionar('.')">.</button>
+      <button onclick="apagar()">←</button>
+      <button class="operador" onclick="adicionar('+')">+</button>
+
+      <button class="limpar" onclick="limpar()">C</button>
+      <button class="igual" onclick="calcular()">=</button>
+    </div>
+  </div>
+
+</section>
+
+<script src="calculadora.js"></script>
+
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
